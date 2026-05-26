@@ -60,9 +60,13 @@ button {
     display: flex;
     font-size: 20px;
     margin: 25px auto;
-    border-radius: 10px;
+
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+
     background-color: rgba(0, 0, 0, 0.572);
     color:white;
-
+    cursor: pointer;
 }
 

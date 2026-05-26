@@ -21,7 +21,7 @@ body {
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     width: 1000px;
-    height: 600px;
+    min-height: 750px;
     box-shadow:  0px 0px 30px rgb(255, 255, 255);
 }
 
@@ -53,12 +53,49 @@ body {
 
 .list-add button {
     display: flex;
+    font-size: 14px;
     flex-direction:none;
-    background-color: #fb76b4;
-    border-radius: 10px;
-    border-color: none;
-    padding: 5px;
-    gap: 4px;
+    border-radius: 15px;
+    color: #ffff;
+    padding: 10px;
+
+}
+
+#inicio:hover{
+    background-color: white;
+    color: #b388ff;
+    box-shadow: 0px 0px 8px #c2a2fa ;
+}
+
+#final:hover{
+    background-color: white;
+    color:#ff5ca8;
+    box-shadow: 0px 0px 8px #ffb6d9 ;
+
+    
+}
+
+#final {
+    background-color: #ff5ca8;
+    border:2px solid #ff5ca8;;
+    cursor: pointer;
+
+
+}
+
+#inicio {
+        background-color:#b388ff;
+        border:2px solid #b388ff;;
+        cursor: pointer;
+
+    }
+
+
+input:focus {
+
+    outline: none;
+    border: 2px solid #ff5ca8;
+    box-shadow: 0px 0px 8px #ffb6d9
 }
 
 .list-add input {
@@ -67,6 +104,102 @@ body {
     width: 500px;
     font-size: 15px;
     border-radius: 15px;
-    border-color: #ff5ca8;
+    border: 2px solid #ff5ca8;
+    margin-right: 15px;
 }
 
+#catList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 45px;
+    gap: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px  #ffb6d9;
+    width: 700px;
+    height: 100px;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.bx-cat {
+    font-size: 50px;
+    color: #ff5ca8;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Nunito', Courier, monospace;
+}
+
+.buttom-card {
+    padding: 50px;
+    display: flex;
+    gap: 20px;
+    ;
+
+    
+}
+
+.edit {
+
+    background-color: #c2a2fa85;
+    color: #b388ff;
+    border-radius: 15px;
+    border: 2px solid #b388ff;
+    font-size: 15px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+
+}
+
+.edit:hover {
+    background-color: white;
+    color: #b388ff;
+    box-shadow: 0px 0px 8px #c2a2fa ;
+    }
+
+.remove {
+
+    background-color: #ff5ca868;
+    color: #ff5ca8;
+    border-radius: 15px;
+    border: 2px solid #ff5ca8;
+    font-size: 15px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+
+}
+
+.remove:hover{
+    background-color: white;
+    color:#ff5ca8;
+    box-shadow: 0px 0px 8px #ffb6d9 ;
+
+    
+}
+
+.view {
+    border: none;
+    background: none;
+    color:#d77ba8;
+    font-size: 25px;
+    cursor: pointer;
+
+}
