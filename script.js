@@ -1,6 +1,4 @@
-function logar(event){
-
-    //IA
+function logar(event) {
     event.preventDefault();
 
     var usuario = document.getElementById('usuario').value;
@@ -8,40 +6,47 @@ function logar(event){
 
     if (usuario === 'aluno' && senha === 'fiap2025') {
         location.href = "lista.html";
-        
-    }
-    else {
-        alert('Usuário ou Senha incorretos')
+    } else {
+        alert('Usuário ou Senha incorretos');
     }
 }
-//---------------------------------------------------
+
+// ---------------------------------------------------
 let cats = ['Tequila', 'Nala', 'Simba'];
+
+function mostrarErro(msg) {
+    document.getElementById('erro').textContent = msg;
+}
 
 function mostrarLista() {
     const list = document.getElementById('catList');
-
     list.innerHTML = '';
 
-    for (let i = 0; i < cats.length; i++) {
-        list.innerHTML += `
-            <article class="card">
-
-                <div class="card-info">
-                    <i class="bx-cat"></i>
-                    <h2>${cats[i]}</h2>
-                </div>
-
-                <div class="buttom-card">
-
-                    <button class="edit" onclick="editarItem(${i})">Editar</button>
-                    <button class="remove" onclick="removerItem(${i})">Remover</button>
-                    <button class="view" onclick="verItem(${i})">
-                        <i class="bx bx-search-alt"></i>
-                    </button>
-                </div>
-            </article>
-        `;
+    if (cats.length === 0) {
+        list.innerHTML = '<p class="lista-vazia">Nenhum gatinho na lista ainda.</p>';
+        return;
     }
+
+    cats.forEach(function(cat, i) {
+        const article = document.createElement('article');
+        article.className = 'card';
+
+        article.innerHTML = `
+            <div class="card-info">
+                <i class="bx-cat"></i>
+                <h2>${cat}</h2>
+            </div>
+            <div class="buttom-card">
+                <button class="edit" onclick="editarItem(${i})">Editar</button>
+                <button class="remove" onclick="removerItem(${i})">Remover</button>
+                <button class="view" onclick="verItem(${i})">
+                    <i class="bx bx-search-alt"></i>
+                </button>
+            </div>
+        `;
+
+        list.appendChild(article);
+    });
 }
 
 function adicionarFinal() {
@@ -53,6 +58,7 @@ function adicionarFinal() {
         return;
     }
 
+    mostrarErro('');
     cats.push(nome);
     input.value = '';
     mostrarLista();
@@ -67,6 +73,7 @@ function adicionarInicio() {
         return;
     }
 
+    mostrarErro('');
     cats.unshift(nome);
     input.value = '';
     mostrarLista();
@@ -84,7 +91,9 @@ function editarItem(index) {
 }
 
 function removerItem(index) {
-    cats.splice(index, 1);
+    cats = cats.filter(function(_, i) {
+        return i !== index;
+    });
     mostrarLista();
 }
 
