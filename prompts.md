@@ -47,8 +47,23 @@
 * **Justificativa:** A ferramenta demonstrou uma capacidade didática superior, ensinando o conceito de forma gradual e mantendo a legibilidade do código.
 
 ---
+## 4º Caso de Uso: Validação e Refinamento Semântico de Código HTML
 
-## 4º Caso de Uso: Validação e Refinamento do Relatório Técnico
+### Prompts Utilizados
+* **Prompt Inicial/Final:** "arrume a semântica desses meus dois códigos: [Código da Lista de Gatinhos] [Código da Tela de Login]"
+
+### Análise das Respostas das IAs
+* **Copilot:** Entregou uma resposta correta e muito parecida com as demais no que diz respeito à substituição de tags genéricas por elementos semânticos. No entanto, apresentou uma análise mais direta, limitando-se a aplicar as tags básicas de formulário sem explorar melhorias na estrutura de acessibilidade ou na organização dos scripts.
+* **ChatGPT:** Também entregou o código corrigido de forma satisfatória e bem semelhante. Apontou a necessidade de labels nos inputs e organizou os blocos de forma limpa, ajudando na legibilidade geral do arquivo, cumprindo bem o papel de formatação textual.
+* **Gemini:** Demonstrou a maior capacidade analítica entre os três. Embora todos tenham entregaram resultados estruturalmente parecidos, o Gemini foi o único que identificou com precisão as inconsistências técnicas e erros graves de sintaxe no segundo código (como o fechamento incorreto da `div.container` após o `</main>` e tags soltas no topo)
+
+### IA Escolhida como Base
+* **Escolha:** Gemini.
+* **Justificativa:** O Gemini foi o escolhido neste caso por sua capacidade superior de contextualização e auditoria técnica. Enquanto o Copilot e o ChatGPT focaram na substituição direta de tags e na organização básica, o Gemini uniu a correção semântica com uma visão crítica sobre a sintaxe do código, corrigindo os erros estruturais ocultos e garantindo que o documento final ficasse impecável.
+
+---
+
+## 5º Caso de Uso: Validação e Refinamento do Relatório Técnico
 
 ### Prompts Utilizados
 * **Prompt Inicial/Final:** "analise essas informações e veja se está de acordo com o que eu fiz: informação: [Especificações da Atividade] o que eu fiz: [Anotações e Histórico de Escolhas das IAs]"

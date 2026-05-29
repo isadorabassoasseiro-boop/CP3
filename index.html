@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev CP3</title>
     <link rel="stylesheet" href="./style.css">
-<script src="./script.js"></script>
-
-    <title>WebDev  CP3</title>
 </head>
-<body>  
+<body>
+
     <main class="login">
-    <div class="container">
+        <section class="container" aria-label="Formulário de login">
+            <h1>Login</h1>
 
+            <form onsubmit="logar(event)">
+                <input type="text" id="usuario" placeholder="Usuário" required>
+                <input type="password" id="senha" placeholder="Senha" required>
 
-        <h1>LOGIN:</h1>
-
-                <!--IA-->
-        <form onsubmit="logar(event)">
-          
-            <input type="text" id="usuario" placeholder=" Usuário"required>
-           
-            <input type="password" id="senha" placeholder=" Senha" required>
-                                                        
-            <button type="submit" class="botao-enviar">submit</button>
-        
-        </form>
+                <button type="submit" class="botao-enviar">Entrar</button>
+            </form>
+        </section>
     </main>
 
-    </div>
+    <script src="./script.js"></script>
 </body>
+</html>

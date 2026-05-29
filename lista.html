@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +9,27 @@
     <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./lista.css">
-    <title>Lista</title>
+    <title>Lista de Gatinhos</title>
 </head>
 <body>
 
-<main class="list">
-    <header class="title">
-        <h1>Meus Gatinhos Fofinhos</h1>
-        <p>Adicione, edite e remova seus gatinhos fofinhos</p>
-    </header>
+    <main class="list">
+        <header class="title">
+            <h1>Meus Gatinhos Fofinhos</h1>
+            <p>Adicione, edite e remova seus gatinhos fofinhos</p>
+        </header>
 
-    <section class="list-add">
-        <input type="text" id="catName" placeholder="Digite o nome do gatinho...">
-        <button id="inicio">Adicionar no início</button>
-        <button id="final">Adicionar no final</button>
-    </section>
+        <section class="list-add" aria-label="Adicionar gatinho">
+            <input type="text" id="catName" placeholder="Digite o nome do gatinho...">
+            <button id="inicio" type="button">Adicionar no início</button>
+            <button id="final" type="button">Adicionar no final</button>
+        </section>
 
-    <p id="erro"></p>
+        <p id="erro"></p>
 
-    <section id="catList"></section>
-</main>
+        <section id="catList" aria-label="Lista de gatinhos"></section>
+    </main>
 
-<script src="./script.js"></script>
-
-</body>
-</html>
-
-
-    </section>
-</main>
-
+    <script src="./script.js"></script>
 </body>
 </html>
